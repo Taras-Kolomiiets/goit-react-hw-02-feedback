@@ -33,6 +33,8 @@ const App = () => {
     return Math.round((good / total) * 100);
   };
 
+  const positiveFeedbackCount = countPositiveFeedbackPercentage();
+
   return (
     <Container>
       <FeedbackOptions handlerClick={handlerClick} />
@@ -41,7 +43,7 @@ const App = () => {
         neutral={neutral}
         bad={bad}
         total={total}
-        countPositiveFeedbackPercentage={countPositiveFeedbackPercentage}
+        positiveFeedbackCount={positiveFeedbackCount}
       />
     </Container>
   );

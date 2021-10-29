@@ -3,13 +3,7 @@ import Statistics from './statistics';
 import Notification from './notification';
 import PropTypes from 'prop-types';
 
-function Section({
-  good,
-  neutral,
-  bad,
-  total,
-  countPositiveFeedbackPercentage,
-}) {
+function Section({ good, neutral, bad, total, positiveFeedbackCount }) {
   return (
     <div>
       {total > 0 ? (
@@ -18,7 +12,7 @@ function Section({
           neutral={neutral}
           bad={bad}
           total={total}
-          countPositiveFeedbackPercentage={countPositiveFeedbackPercentage}
+          positiveFeedbackCount={positiveFeedbackCount}
         />
       ) : (
         <Notification message="No feedback given" />

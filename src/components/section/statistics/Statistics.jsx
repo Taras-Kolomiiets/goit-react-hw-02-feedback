@@ -2,13 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import s from './Statistics.module.css';
 
-function Statistics({
-  good,
-  bad,
-  neutral,
-  total,
-  countPositiveFeedbackPercentage,
-}) {
+function Statistics({ good, bad, neutral, total, positiveFeedbackCount }) {
   return (
     <div>
       <h2 className={s.header}>Statistics</h2>
@@ -16,9 +10,7 @@ function Statistics({
       <p className={s.item}>Neutral: {neutral}</p>
       <p className={s.item}>Bad: {bad}</p>
       <p className={s.total}>Total: {total}</p>
-      <p className={s.feedback}>
-        Positive feedback: {countPositiveFeedbackPercentage()} %
-      </p>
+      <p className={s.feedback}>Positive feedback: {positiveFeedbackCount} %</p>
     </div>
   );
 }
