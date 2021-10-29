@@ -16,9 +16,11 @@ function Statistics({ good, bad, neutral, total, positiveFeedbackCount }) {
 }
 
 Statistics.propTypes = {
-  state: PropTypes.object.isRequired,
+  good: PropTypes.number.isRequired,
+  neutral: PropTypes.number.isRequired,
+  bad: PropTypes.number.isRequired,
   total: PropTypes.number.isRequired,
-  countPositiveFeedbackPercentage: PropTypes.func.isRequired,
+  positiveFeedbackCount: PropTypes.number.isRequired,
 };
 
 export default Statistics;

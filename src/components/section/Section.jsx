@@ -22,9 +22,11 @@ function Section({ good, neutral, bad, total, positiveFeedbackCount }) {
 }
 
 Section.propTypes = {
-  state: PropTypes.object.isRequired,
+  good: PropTypes.number.isRequired,
+  neutral: PropTypes.number.isRequired,
+  bad: PropTypes.number.isRequired,
   total: PropTypes.number.isRequired,
-  countPositiveFeedbackPercentage: PropTypes.func.isRequired,
+  positiveFeedbackCount: PropTypes.number.isRequired,
 };
 
 export default Section;
